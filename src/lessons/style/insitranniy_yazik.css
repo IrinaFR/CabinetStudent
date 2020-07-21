@@ -1,0 +1,23 @@
+.header-lesson {
+  display: flex;
+  font-size: 24px;
+}
+.header-lesson .name-lesson {
+  margin-right: 15px;
+}
+.header-lesson #date-lesson {
+  color: #A7A7A7;
+}
+
+.type-lesson {
+  margin-top: 0;
+  color: #A7A7A7;
+  font-size: 24px;
+}
+
+.name-section {
+  color: #a7a7a7;
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 15px;
+}
