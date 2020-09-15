@@ -16,6 +16,10 @@ button {
   margin-top: 40px;
 }
 
+button a{
+  color: #fff;
+}
+
 #form {
   display: flex;
   align-items: center;

@@ -1,0 +1,67 @@
+.group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-group{
+    flex: 1 100%;
+    height: 46px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.card-group:hover{
+    opacity: .5;
+}
+
+.starosta{
+    color: #51545D;
+}
+
+.block-lesson{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-lesson{
+    width: 433px;
+    height: 46px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+.card-lesson:hover{
+    opacity: .5;
+}
+
+.name-lesson{
+    color: #000;
+}
+
+#modal-add-lesson{
+    display: none;
+}
+
+.type-lesson{
+    color: #51545D;
+}
+
+@media (max-width: 1015px) {
+    .card-lesson{
+        width: 270px;
+        font-size: 14px;
+        height: 36px;
+    }
+
+}

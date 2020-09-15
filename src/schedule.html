@@ -10,11 +10,20 @@
 </head>
 
 <body>
+<div id="header-mobile" class="header-mobile">
+    <div id="left" class="left-menu mobile-menu">
+        <span class="line-menu"></span>
+    </div>
+    <div id="right" class="left-menu mobile-menu">
+        <span class="line-menu"></span>
+    </div>
+</div>
     <div class="content">
     <header>
         <!-- Меню -->
         <nav>
             <ul>
+                <a href="#">
                 <li class="activate menu-tab">
                     <div class="icon-tab">
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -23,9 +32,11 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Расписание</a>
+                        Расписание
                     </div>
                 </li>
+                </a>
+                <a href="./Session.html">
                 <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
@@ -33,9 +44,11 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Сессия</a>
+                       Сессия
                     </div>
                 </li>
+                </a>
+                <a href="./Contacts.html">
                 <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
@@ -46,9 +59,11 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Контакты</a>
+                       Контакты
                     </div>
                 </li>
+                </a>
+                <a href="#">
                 <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="18" height="20" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
@@ -57,10 +72,17 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Карта</a>
+                       Карта
                     </div>
                 </li>
+                </a>
             </ul>
+            <div id="exit" class="exit">
+                <div>
+                    <img src="./img/exit.svg" alt="exit">
+                </div>
+                <a href="./Index.html">Выход</a>
+            </div>
         </nav>
     </header>
     <section class="center-content">
@@ -76,7 +98,7 @@
         <!-- Заметки -->
         <div class="block-notes">
             <h3>Заметки старосты</h3>
-            <p class="edit">Добавить заметку +</p>
+            <p class="edit" id="add-notes">Добавить заметку +</p>
             <div id="cards">
             <div class="card-note">
                 <div class="card-title">
@@ -92,7 +114,18 @@
             </div>
         </div>
     </section>
+        <div class="modal" id="modal-add-notes">
+            <form>
+                <label for="text">Текст заметки</label>
+                <input type="text" name="text" id="text-notes" placeholder="Текст заметки">
+                <button id="add-notes-btn" class="add-btn">Добавить</button>
+            </form>
+            <button class="card-delete" id="close-modal-notes">
+                <span></span>
+            </button>
+        </div>
     </div>
+<script src="./scripts/main.js"></script>
 </body>
 
 </html>

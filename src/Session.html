@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Расписание</title>
+    <title>Сессия</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/schedule.css">
+    <link rel="stylesheet" href="./styles/session.css">
 </head>
 
 <body>
+    <div id="header-mobile" class="header-mobile">
+        <div id="left" class="left-menu mobile-menu">
+            <span class="line-menu"></span>
+        </div>
+        <div id="right" class="left-menu mobile-menu">
+            <span class="line-menu"></span>
+        </div>
+    </div>
     <div class="content">
     <header>
         <!-- Меню -->
         <nav>
             <ul>
-                <li class="activate menu-tab">
+                <a href="./schedule.html">
+                <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -23,19 +32,23 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Расписание</a>
+                      Расписание
                     </div>
                 </li>
-                <li class="menu-tab">
+                </a>
+                <a href="#">
+                <li class="activate menu-tab">
                     <div class="icon-tab">
                         <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18">
                             <path d="M19.7,6.2C19.7,6.1,19.7,6.1,19.7,6.2c-0.1-0.2-0.1-0.3-0.2-0.4c0,0,0,0,0,0c-0.1-0.1-0.1-0.1-0.2-0.2l-8.8-5 c-0.3-0.2-0.7-0.2-1,0l-8.8,5C0.4,5.8,0.3,6.1,0.3,6.5s0.2,0.7,0.5,0.9l2.6,1.5v4.5c0,0.4,0.2,0.7,0.5,0.9l5.6,3.1c0,0,0,0,0.1,0	c0,0,0.1,0,0.1,0c0.1,0,0.2,0.1,0.3,0.1s0.2,0,0.3-0.1c0,0,0.1,0,0.1,0c0,0,0,0,0.1,0l5.6-3.1c0.3-0.2,0.5-0.5,0.5-0.9V8.9l1.1-0.6 v5.2c0,0.6,0.4,1,1,1s1-0.4,1-1V6.5C19.8,6.4,19.7,6.3,19.7,6.2z M5.4,10L9,12.1v2.7l-3.6-2V10z M14.6,12.8l-3.6,2v-2.7l3.6-2.1 V12.8z M10,10.3L3.3,6.5L10,2.7l6.7,3.8L10,10.3z" />
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Сессия</a>
+                       Сессия
                     </div>
                 </li>
+                </a>
+                <a href="./Contacts.html">
                 <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="16" height="20" viewBox="0 0 16 20" xmlns="http://www.w3.org/2000/svg">
@@ -46,9 +59,11 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Контакты</a>
+                       Контакты
                     </div>
                 </li>
+                </a>
+                <a href="#">
                 <li class="menu-tab">
                     <div class="icon-tab">
                         <svg width="18" height="20" viewBox="0 0 18 20" xmlns="http://www.w3.org/2000/svg">
@@ -57,26 +72,29 @@
                         </svg>
                     </div>
                     <div class="link-tab">
-                        <a href="#">Карта</a>
+                       Карта
                     </div>
                 </li>
+                </a>
             </ul>
+            <div id="exit" class="exit">
+                <div>
+                    <img src="./img/exit.svg" alt="exit">
+                </div>
+                <a href="./Index.html">Выход</a>
+            </div>
         </nav>
     </header>
     <section class="center-content">
-        <!-- Центр страницы -->
-        <div class="title-center">
-            <h3>Расписание занятий</h3>
-            <span>
-                Описание контента
-            </span>
+        <div class="title-center" id="content-session">
+
         </div>
     </section>
     <section class="notes">
         <!-- Заметки -->
         <div class="block-notes">
             <h3>Заметки старосты</h3>
-            <p class="edit">Добавить заметку +</p>
+            <p class="edit" id="add-notes">Добавить заметку +</p>
             <div id="cards">
             <div class="card-note">
                 <div class="card-title">
@@ -92,7 +110,34 @@
             </div>
         </div>
     </section>
+        <div class="modal" id="modal-add-notes">
+            <form>
+                <label for="text">Текст заметки</label>
+                <input type="text" name="text" id="text-notes" placeholder="Текст заметки">
+                <button id="add-notes-btn" class="add-btn">Добавить</button>
+            </form>
+            <button class="card-delete" id="close-modal-notes">
+                <span></span>
+            </button>
+        </div>
+        <div class="modal" id="modal-add-lesson">
+            <form>
+                <label for="name-lesson">Название предмета</label>
+                <input type="text" name="name-lesson" placeholder="Название" id="name-lesson">
+                <label>Тип сдачи</label>
+                <select id="type-lesson">
+                    <option value="Зачёт" >Зачёт</option>
+                    <option value="Экзамен">Экзамен</option>
+                </select>
+                <button class="add-btn" id="add-lesson-btn">Добавить</button>
+            </form>
+            <button class="card-delete" id="close-modal-lesson">
+                <span></span>
+            </button>
+        </div>
     </div>
+    <script src="./scripts/session.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>

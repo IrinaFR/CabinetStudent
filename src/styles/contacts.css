@@ -1,0 +1,39 @@
+.group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-group{
+    flex: 1 100%;
+    height: 46px;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.card-group:hover{
+    opacity: .5;
+}
+
+.starosta{
+    color: #51545D;
+}
+
+.student{
+    margin-bottom: 10px;
+}
+
+.student span{
+    margin-right: 30px;
+}
+
+.name-student{
+    font-weight: bold;
+    color: #04BB00;
+}
